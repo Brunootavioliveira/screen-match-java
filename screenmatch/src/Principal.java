@@ -1,11 +1,14 @@
+import br.com.alura.screenmatch.modelos.Filme; // Referenciando a classe filme
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme(); // Pegando a classe filme criada, e criando uma variavel passando a referencia dessa classe pra ela
-        meuFilme.nome = "O poderoso chefão"; // Atribuindo valor a as classes criadas
-        meuFilme.anoLancamento = 1970;
-        meuFilme.DuracaoMinutos = 200;
+        meuFilme.setNome("The Matrix"); // Atribuindo valor a as classes criadas
+        meuFilme.setAnoLancamento(1999); // SET = para atribuir valor, de um atributo privated
+        meuFilme.setDuracaoMinutos(135);
+
 
         /* System.out.println(meuFilme); Será impresso o nome da classe e o endereço do objeto
         System.out.println(meuFilme.nome); Se eu quiser acesso ao atributo do objeto criado, basta usar o nome da variavel com o .
@@ -21,8 +24,8 @@ public class Principal {
         meuFilme.avalia(10);
         meuFilme.avalia(8);
         meuFilme.avalia(9);
-        System.out.println(meuFilme.somaAvaliacoes);
-        System.out.println(meuFilme.totalAvaliacao);
-        System.out.println(meuFilme.pegaMediaAvaliacoes());
+        System.out.println("Soma do valor das avaliações: " + meuFilme.getSomaAvaliacoes());
+        System.out.println("Total de avaliações feitas: " + meuFilme.getTotalAvaliacao());
+        System.out.println("Média das avaliações: " + meuFilme.pegaMediaAvaliacoes());
     }
 }
