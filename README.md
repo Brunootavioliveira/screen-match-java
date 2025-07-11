@@ -54,7 +54,7 @@ Ao executar a classe `Main.java`, a aplicação cria diversos filmes e séries, 
 
 ## 📷 Capturas de Tela
 
-<img width="1807" height="938" alt="image" src="https://github.com/user-attachments/assets/86bcb255-836d-4242-ac82-d3208f1a695f" />
+<img width="1827" height="926" alt="image" src="https://github.com/user-attachments/assets/8638f80a-a2e8-49ac-941a-23f24c4d81c2" />
 
 
 
