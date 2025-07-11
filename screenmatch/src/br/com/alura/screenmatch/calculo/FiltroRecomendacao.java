@@ -1,15 +1,27 @@
 package br.com.alura.screenmatch.calculo;
 
-public class FiltroRecomendacao {
+import br.com.alura.screenmatch.modelos.Title;
+
+public class FiltroRecomendacao extends Title {
     private String recomendacao;
 
     public void filtra(Classificavel classificavel) {
         if (classificavel.getClassificacao() >= 4) {
-            System.out.println("Está entre os preferidos");
-        } else if (classificavel.getClassificacao() <= 2){
-            System.out.println("Bem avaliado no momento");
-        } else{
-            System.out.println("Coloque na sua lista para assistir depois");
+            if (classificavel instanceof Title) {
+                Title titulo = (Title) classificavel;
+                System.out.println("O " + titulo.getNome() + " Está entre os preferidos");
+            }
+        } else if (classificavel.getClassificacao() <= 2) {
+            if (classificavel instanceof Title) {
+                Title titulo = (Title) classificavel;
+                System.out.println("O " + titulo.getNome() + " Bem avaliado no momento");
+            }
+        } else {
+            if (classificavel instanceof Title) {
+                Title titulo = (Title) classificavel;
+                System.out.println("O " + titulo.getNome() + " Coloque na sua lista para assistir depois");
+            }
         }
     }
+
 }

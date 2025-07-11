@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Series extends Title{
+import br.com.alura.screenmatch.calculo.Classificavel;
+
+public class Series extends Title implements Classificavel {
     private int temporadas;
     private boolean ativa;
     private int episodiosTemporada;
@@ -42,4 +44,17 @@ public class Series extends Title{
     public int getDuracaoMinutos() {
         return temporadas * episodiosTemporada * minutosEpisodios;
     }
+
+    @Override
+    public void exibiFichaTecnica() {
+        System.out.println("Nome da série: " + getNome());
+        System.out.println("Ano de lançamento: " + getAnoLancamento());
+        System.out.println("Sinopse: " + getSinopse());
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) pegaMediaAvaliacoes() / 2;
+    }
+
 }

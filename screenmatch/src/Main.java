@@ -1,35 +1,18 @@
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
-import br.com.alura.screenmatch.modelos.Filme; // Referenciando a classe filme
+import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Series;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme(); // Pegando a classe filme criada, e criando uma variavel passando a referencia dessa classe pra ela
-        meuFilme.setNome("The Matrix"); // Atribuindo valor a as classes criadas
-        meuFilme.setAnoLancamento(1999); // SET = para atribuir valor, de um atributo privated
-        meuFilme.setDuracaoMinutos(135);
-        System.out.println("Duração em minutos: " + meuFilme.getDuracaoMinutos());
-
-        Filme meuFilme2 = new Filme(); // Pegando a classe filme criada, e criando uma variavel passando a referencia dessa classe pra ela
-        meuFilme2.setNome("Avengers"); // Atribuindo valor a as classes criadas
-        meuFilme2.setAnoLancamento(2010); // SET = para atribuir valor, de um atributo privated
-        meuFilme2.setDuracaoMinutos(195);
-
-        /* System.out.println(meuFilme); Será impresso o nome da classe e o endereço do objeto
-        System.out.println(meuFilme.nome); Se eu quiser acesso ao atributo do objeto criado, basta usar o nome da variavel com o .
-        System.out.println(meuFilme.anoLancamento);
-        Criando objeto na classe e INSTANCIANDO (usando NEW, para conseguir usar métodos e atributos de uma classe)
-
-        Classe = uma planta de uma casa, uma especificacao de algo (todo filme vai ter nome),
-        la só ta escrito que o filme vai ter nome
-         New = Agora com o filme em maos (na memoria) que eu posso atribuir nome...
-        */
-
-        meuFilme.exibiFichaTecnica(); //Maneira mais facil, a própria classe, ja imprimi as informacoes para a main principal
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("The Matrix");
+        meuFilme.setAnoLancamento(1999);
+        meuFilme.setDuracaoMinutos(136);
+        meuFilme.setDirector("Lana e Lilly Wachowski");
+        meuFilme.setSinopse("Um hacker descobre que o mundo em que vive é uma simulação criada por máquinas e se junta à resistência para libertar a humanidade.");
+        meuFilme.exibiFichaTecnica();
         meuFilme.avalia(10);
         meuFilme.avalia(8);
         meuFilme.avalia(9);
@@ -37,28 +20,80 @@ public class Main {
         System.out.println("Total de avaliações feitas: " + meuFilme.getTotalAvaliacao());
         System.out.println("Média das avaliações: " + meuFilme.pegaMediaAvaliacoes());
 
-        Series lost = new Series();
-        lost.setNome("Lost");
-        lost.setAnoLancamento(2020);
-        lost.exibiFichaTecnica();
-        lost.setTemporadas(10);
-        lost.setEpisodiosTemporada(10);
-        lost.setMinutosEpisodios(50);
-        System.out.println("Duração em minutos da série " + lost.getDuracaoMinutos());
+        System.out.println("-----------------------------------------------------");
+
+        Filme meuFilme2 = new Filme();
+        meuFilme2.setNome("Avengers");
+        meuFilme2.setAnoLancamento(2012);
+        meuFilme2.setDuracaoMinutos(143);
+        meuFilme2.setDirector("Joss Whedon");
+        meuFilme2.setSinopse("Um grupo de super-heróis se une para proteger a Terra de uma invasão alienígena iminente.");
+        meuFilme2.exibiFichaTecnica();
+        meuFilme2.avalia(6);
+        meuFilme2.avalia(8);
+        meuFilme2.avalia(4);
+        System.out.println("Soma do valor das avaliações: " + meuFilme2.getSomaAvaliacoes());
+        System.out.println("Total de avaliações feitas: " + meuFilme2.getTotalAvaliacao());
+        System.out.println("Média das avaliações: " + meuFilme2.pegaMediaAvaliacoes());
+
+        System.out.println("-----------------------------------------------------");
+
+        Series minhaSerie = new Series();
+        minhaSerie.setNome("Breaking Bad");
+        minhaSerie.setAnoLancamento(2008);
+        minhaSerie.setTemporadas(5);
+        minhaSerie.setEpisodiosTemporada(12);
+        minhaSerie.setMinutosEpisodios(50);
+        minhaSerie.setSinopse("Um professor com câncer terminal entra no mundo do tráfico de drogas para sustentar sua família e acaba se tornando um poderoso criminoso.");
+        minhaSerie.exibiFichaTecnica();
+        minhaSerie.avalia(8);
+        minhaSerie.avalia(9);
+        minhaSerie.avalia(8);
+        System.out.println("Soma do valor das avaliações: " + minhaSerie.getSomaAvaliacoes());
+        System.out.println("Total de avaliações feitas: " + minhaSerie.getTotalAvaliacao());
+        System.out.println("Média das avaliações: " + minhaSerie.pegaMediaAvaliacoes());
+        System.out.println("Duração em minutos da série " + minhaSerie.getDuracaoMinutos());
+
+        System.out.println("-----------------------------------------------------");
+
+        Series minhaSerie2 = new Series();
+        minhaSerie2.setNome("Mr. Robot");
+        minhaSerie2.setAnoLancamento(2015);
+        minhaSerie2.setTemporadas(4);
+        minhaSerie2.setEpisodiosTemporada(11);
+        minhaSerie2.setMinutosEpisodios(50);
+        minhaSerie2.setSinopse("Um jovem programador com transtornos mentais é recrutado por um grupo hacker para derrubar corporações corruptas, enquanto enfrenta seus próprios demônios internos.");
+        minhaSerie2.exibiFichaTecnica();
+        minhaSerie2.avalia(2);
+        minhaSerie2.avalia(3);
+        minhaSerie2.avalia(4);
+        System.out.println("Soma do valor das avaliações: " + minhaSerie2.getSomaAvaliacoes());
+        System.out.println("Total de avaliações feitas: " + minhaSerie2.getTotalAvaliacao());
+        System.out.println("Média das avaliações: " + minhaSerie2.pegaMediaAvaliacoes());
+        System.out.println("Duração em minutos da série " + minhaSerie2.getDuracaoMinutos());
+
+        System.out.println("-----------------------------------------------------");
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        System.out.println("Saiba duração total em minutos de todas as séries e filme: ");
         calculadora.inclui(meuFilme);
         calculadora.inclui(meuFilme2);
-        calculadora.inclui(lost);
+        calculadora.inclui(minhaSerie);
+        calculadora.inclui(minhaSerie2);
         System.out.println(calculadora.getTempoTotal());
 
+        System.out.println("-----------------------------------------------------");
+
+        System.out.println("Saiba o quão recomendavel é sua série ou filme: ");
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
+        filtro.filtra(meuFilme2);
+        filtro.filtra(minhaSerie);
+        filtro.filtra(minhaSerie2);
+
+
 
         Episodio episodio = new Episodio();
-        episodio.setNumber(1);
-        episodio.setSeries(lost);
-        episodio.setTotalViews(300);
-        filtro.filtra(episodio);
+        System.out.println("....");
     }
 }

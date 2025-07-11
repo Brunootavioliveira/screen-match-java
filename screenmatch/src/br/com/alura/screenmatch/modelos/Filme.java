@@ -16,4 +16,13 @@ public class Filme extends Title implements Classificavel {
     public int getClassificacao() {
         return (int) pegaMediaAvaliacoes() / 2;
     }
+
+    @Override
+    public void exibiFichaTecnica () {
+        System.out.println("Nome do filme: " + getNome()); // Não precisa mais de varialvel para buscar os atributos do filme, pq estamos dentro da classe
+        System.out.println("Ano de lançamento: " + getAnoLancamento());
+        System.out.println("Duração em minutos: " + getDuracaoMinutos());
+        System.out.println("Diretor: " + getDirector());
+        System.out.println("Sinopse: " + getSinopse());
+    }
 }
