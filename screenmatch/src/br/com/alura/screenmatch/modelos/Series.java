@@ -57,4 +57,15 @@ public class Series extends Title implements Classificavel {
         return (int) pegaMediaAvaliacoes() / 2;
     }
 
+    public Series(String nome, int anoLancamento, int temporadas, int episodiosTemporada, int minutosEpisodios, String sinopse) {
+        super(nome, anoLancamento, sinopse);
+        this.temporadas = temporadas;
+        this.episodiosTemporada = episodiosTemporada;
+        this.minutosEpisodios = minutosEpisodios;
+    }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getNome() + "(" + this.getAnoLancamento() + ")";
+    }
 }

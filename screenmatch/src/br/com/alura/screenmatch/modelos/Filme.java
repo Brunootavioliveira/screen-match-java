@@ -25,4 +25,14 @@ public class Filme extends Title implements Classificavel {
         System.out.println("Diretor: " + getDirector());
         System.out.println("Sinopse: " + getSinopse());
     }
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + "(" + this.getAnoLancamento() + ")";
+    }
+
+    public Filme(String nome, int anoLancamento, String director, int duraçãoMinutos, String sinopse) {
+        super(nome, anoLancamento, duraçãoMinutos, sinopse);
+        this.director = director;
+    }
 }

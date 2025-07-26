@@ -3,7 +3,6 @@ package br.com.alura.screenmatch.calculo;
 import br.com.alura.screenmatch.modelos.Title;
 
 public class FiltroRecomendacao extends Title {
-    private String recomendacao;
 
     public void filtra(Classificavel classificavel) {
         if (classificavel.getClassificacao() >= 4) {
